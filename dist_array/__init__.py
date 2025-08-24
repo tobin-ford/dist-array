@@ -2,6 +2,7 @@ from importlib.metadata import version
 import logging
 
 from .core import serialize
+from .core import protocol
 
 __version__ = version("dist_array")
 
