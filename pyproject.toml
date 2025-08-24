@@ -1,0 +1,26 @@
+[project]
+name="dist_array"
+description="rpc for remote arrays"
+version="v0.0.0"
+
+[build-system]
+requires = ["setuptools>=43.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+dependencies = [
+    "numpy",
+]
+
+[pytest]
+testpaths="test"
+python_files="test_*.py"
+
+
+[tool.setuptools.packages.find]
+include = ["dist_array"]
+
+[tool.pytest.ini_options]
+testpaths = "tests"
+addopts = [
+    "-p no:warnings",
+    "--verbose",
+]
